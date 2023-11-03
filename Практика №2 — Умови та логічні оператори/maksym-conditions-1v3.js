@@ -2,7 +2,8 @@ function print(text) {
     console.log(text)
 }
 
-function message(h, p, d = 1) {
+//робимо функцию для обчислення, щоб мінімізувати меребор масиву
+function message(h, p, d = 1) { //скидку задаемо по замовчуванню 1
     if (d == 1) {
         print(`Замовник замовляє проект на ${h} годин.`)
         print(`Цей проєкт  буде коштувати ${p * h} грн.`)
@@ -11,7 +12,6 @@ function message(h, p, d = 1) {
         print(`Цей проєкт  буде коштувати ${(p * h) - (d * (p * h))} грн.`)
     }
 }
-
 
 const hours = [21, 87, 205]
 const price = 450 //Вартість за годину
