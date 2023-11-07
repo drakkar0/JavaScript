@@ -14,7 +14,7 @@ let eShop = 0
 let orderType = 'ddd'
 let iteration
 while (true) {
-    orderType = prompt('Введить кількисть поверхів')
+    orderType = prompt('Введить назву проєкту: вебсайт, посадкова, інтернет-магазин')
     switch (orderType) {
         case 'вебсайт':
             if (website < 1) {
