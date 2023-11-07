@@ -1,0 +1,56 @@
+function print(text) {
+    alert(text)
+}
+function sorry(text) {
+    return `
+    В цьому місці Максим вже не зможе взяти додаткове замовлення типу '${text}'.
+    `
+}
+
+let website = 0
+let lending = 0
+let eShop = 0
+
+let orderType = 'ddd'
+let iteration
+while (true) {
+    orderType = prompt('Введить кількисть поверхів')
+    switch (orderType) {
+        case 'вебсайт':
+            if (website < 1) {
+                print('Супер! Виконаймо цей проєкт в цьому місяці!')
+            } else {
+                print(sorry(orderType))
+            }
+            website++
+            break
+        case 'посадкова':
+            if (lending < 2) {
+                print('Супер! Виконаймо цей проєкт в цьому місяці!')
+            } else {
+                print(sorry(orderType))
+            }
+            lending++
+            break
+        case 'інтернет-магазин':
+            if (eShop < 1) {
+                print('Супер! Виконаймо цей проєкт в цьому місяці!')
+            } else {
+                print(sorry(orderType))
+            }
+            eShop++
+            break
+        default:
+            if (orderType !== null) {
+                print(`На жаль, Максим не виконує такі типи замовлень. 
+            Спробуйте ввести одне з наступних: 
+            ʼвебсайтʼ, ʼпосадковаʼ, ʼінтернет-магазинʼ`)
+            }
+            break
+    }
+
+    if (orderType === null) { //якщо натуснута кнопка відміна - закриваємо
+        break
+    }
+
+}
